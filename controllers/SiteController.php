@@ -108,7 +108,7 @@ class SiteController extends Controller
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) ) {
             $model->check($model->name);
-            Yii::$app->session->addFlash('error','contactFormSubmitted');
+            
           //  return $this->refresh();
         }
         return $this->render('contact', [

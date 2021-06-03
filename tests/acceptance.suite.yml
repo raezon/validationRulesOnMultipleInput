@@ -1,0 +1,14 @@
+class_name: AcceptanceTester
+modules:
+    enabled:
+        # - DataFactory:
+        #    factories: codeception/_support/factories
+         #   depends: Yii2
+        - WebDriver:
+            url: http://127.0.0.1:8080/
+            browser: chrome
+        - Yii2:
+            part: [orm, fixtures,Db] # allow to use AR methods
+            entryScript: index-test.php
+            cleanup: false
+            class_name: AcceptanceTester

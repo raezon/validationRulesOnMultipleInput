@@ -56,10 +56,12 @@ class ContactForm extends Model
                
                 if($value['priority']>4){
                     $this->addError('name','priorite should not be greater than 3');
-                    var_dump($value['priority']);
-                
+                    //var_dump($value['priority']);
+                    Yii::$app->session->addFlash('error','contact not Form Submitted');
                     return false;
                 }
+                Yii::$app->session->addFlash('success','contact Form Submitted');
+                return true;
                
                // return true;
             }

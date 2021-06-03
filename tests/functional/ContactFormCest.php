@@ -12,7 +12,7 @@ class ContactFormCest
         $I->see('Contact', 'h1');        
     }
 
-    public function submitEmptyForm(\FunctionalTester $I)
+   /* public function submitEmptyForm(\FunctionalTester $I)
     {
         $I->submitForm('#contact-form', []);
         $I->expectTo('see validations errors');
@@ -53,5 +53,5 @@ class ContactFormCest
         $I->seeEmailIsSent();
         $I->dontSeeElement('#contact-form');
         $I->see('Thank you for contacting us. We will respond to you as soon as possible.');        
-    }
+    }*/
 }
